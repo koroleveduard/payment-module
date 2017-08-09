@@ -48,9 +48,15 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/<_a>',
             ],
         ],
         
+    ],
+    'modules' => [
+        'account' => [
+            'class' => 'app\modules\account\Module',
+        ],
     ],
     'params' => $params,
 ];
